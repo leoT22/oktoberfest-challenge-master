@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/*font-family: 'Roboto', sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/*font-family: 'Bebas Neue', cursive;*/
+
+@import url("https://fonts.google.com/specimen/Shadows+Into+Light+Two");
+/*font-family: 'Shadows Into Light Two'*/
+
+/* ---Estrutura da página--- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#artistas {
+  position: relative;
+  top: 2vw;
+}
+
+.titulo {
+  font-family: "Bebas Neue", cursive;
+  color: #fdc41f;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+  margin-top: 30px;
+}
+
+.subtitulo {
+  font-family: "Bebas Neue", cursive;
+  color: #fdc41f;
+  text-align: center;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+}
+
+.imagens {
+  margin-left: 4.4%;
+  margin-right: 4.4%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+.imagens img {
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.308);
+  cursor: pointer;
+  margin: 4px;
+  opacity: 80%;
+}
+
+/* ---Artistas confirmados - TOPO--- */
+
+#the-rock:hover,
+#fabio-melo:hover,
+#ivete-sangalo:hover,
+#gil-vigor:hover {
+  opacity: 100%;
+  transition: 0.8s;
+}
+
+/* ---Sessão sobre - MEIO--- */
+
+.sobre {
+  padding: 5px;
+  width: auto;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  align-items: center;
+  background-color: #ed2a44;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.308);
+  margin-top: 30px;
+}
+
+#intro {
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+.sobre p {
+  font-family: "Bebas Neue", cursive;
+  color: #fdc41f;
+  text-align: left;
+  font-size: 17px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.479);
+  width: 70%;
+}
+
+.sobre img {
+  margin-right: 13%;
+  width: 30%;
+}
+
+.sobre ul {
+  list-style: none;
+  margin-left: 3vw;
+}
+
+.sobre li :before {
+  content: "\1F37B ";
+}
+
+@media (max-width: 1100px) {
+  body {
+    overflow-x: hidden;
+  }
+  #the-rock,
+  #fabio-melo,
+  #ivete-sangalo,
+  #gil-vigor {
+    opacity: 100%;
+  }
+
+  .sobre {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sobre img {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}
+
+/* ---Carrossel de fotos - MEIO--- */
+
+.carrossel {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin: 30px 5%;
+  min-height: 80vh;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #00000054;
+  overflow: hidden;
+  height: auto;
+  width: 90%;
+}
+
+.container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.carrossel img {
+  object-fit: cover;
+  width: 90vw; /* mudar no carousel.js também */
+}
+
+@media (max-width: 1100px) {
+  .carrossel {
+    display: block;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+  }
+}
+
+/* ---Mapa de localização - INFERIOR--- */
+
+.mapa {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+.local-img {
+  margin-left: 15%;
+  display: flex;
+  width: 70%;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  z-index: 0;
+  margin-top: 30px;
+}
+
+/* ---Formulário de compra--- */
+
+.formulario {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+form {
+  margin: 40px 0;
+}
+
+.input-padrao {
+  display: flex;
+  margin: 5px 20%;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+label {
+  font-family: "Bebas Neue", cursive;
+  font-size: 16px;
+  color: #fdc41f;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+}
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  background: #26001e;
+  color: #fdc41f;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  transition: 1s all;
+  cursor: pointer;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 30px;
+}
+
+.enviar:hover {
+  color: #ed2a44;
+}
+
+/* Membros do time */
+
+.time a {
+  text-decoration: none;
+}
+
+#titulo-nome {
+  margin-top: 10vw;
+}
+
+#sub-nome {
+  margin-bottom: 3%;
+}
+
+.time {
+  margin-top: 30px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.membro {
+  width: 20.5%;
+  transition: 0.5s;
+  border-radius: 40px;
+  opacity: 0.8;
+  padding: 1%;
+}
+
+.membro-nome {
+  display: inline-block;
+  width: 20.5%;
+  transition: 0.5s;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-family: "Bebas Neue", cursive;
+  color: #fdc41f;
+  font-size: 35px;
+  background-color: #26001e;
+}
+
+.membro-nome:hover {
+  color: #ed2a44;
+  transform: scale(1.03);
+}
+
+.membro-nome::before {
+  content: "\1F37B ";
+}
+
+.time-nome {
+  background: #26001e;
+  opacity: 0.8;
+}
+
+.membro:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#titulo-video{
+  margin-top: 80px;
+}
+.video {
+margin-top: 30px;
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.video iframe {
+  margin-top: 30px;
+  width: 40%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.video h2 {
+  padding-bottom: 2%;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  background-color: #26001e;
+  margin-top: 50px;
+  width: 100%;
+  padding-top: 1em;
+}
+
+.rodape-img {
+  width: 100%;
+}
+
+.copyright {
+  color: #ffffff;
+  font-family: bebas Neue, cursive;
+  font-size: 20px;
+  margin: 0px 0 0;
+}
+
+/* ---Estrutura da página--- */
+
+@media (max-width: 1100px) {
+  .imagens {
+    width: 300px;
+    display: list-item;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+  }
+  .sobre img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .sobre {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .enviar {
+    font-size: 20px;
+    width: 40%;
+    margin: 2px 2px 2px 2px;
+  }
+
+  .membro-nome {
+    font-size: 12px;
+  }
+
+  .video iframe {
+    margin-top: 30px;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 280px) {
+  .imagens {
+    width: 260px;
+  }
+  .imagens img {
+    width: 260px;
+  }
+}
+#videoBG {
+  position: fixed;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #videoBG {
+    width: auto;
+    height: 100%;
+  }
+}
